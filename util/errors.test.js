@@ -2,11 +2,10 @@ import { describe, it, expect } from 'vitest';
 import { HttpError, ValidationError } from './errors';
 
 describe('class HttpError', () => {
-    // constructor(statusCode, message, data), we must pass them to the class HttpError constructor. 
-    it('should contain the provided status code, message, and data/should contain statusCode, message, and data properties', () => {
+    it('should contain statusCode, message, and data properties', () => {
         const testStatus = 1;
         const testMessage = 'Test';
-        const testData = { key: 'test' }; // testData is an object. It has a property named key. 
+        const testData = { key: 'test' };
 
         const testError = new HttpError(testStatus, testMessage, testData);
 
@@ -28,7 +27,7 @@ describe('class HttpError', () => {
 });
 
 describe('class ValidationError', () => {
-    it('should contain the provided message/should contain the message property', () => {
+    it('should contain the message property', () => {
         const testMessage = 'Test';
 
         const testError = new ValidationError(testMessage);
