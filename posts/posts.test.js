@@ -11,8 +11,6 @@ describe('extractPostData()', () => {
             title: testTitle,
             content: testContent,
             get(identifier){
-                /* Returning this object, referring to this object inside this method. 
-                We are using the [identifier] to dynamically access the title and content keys. */
                 return this [identifier];
             },
         };
